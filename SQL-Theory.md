@@ -379,7 +379,7 @@ FULL JOIN, или FULL OUTER JOIN, в SQL объединяет строки из
 * Собрать данные из нескольких источников, где некоторые записи могут отсутствовать в одной из таблиц.
 
 ## 15.	Что такое Union?
-
+![Uniom](https://www.google.com/url?sa=i&url=https%3A%2F%2Fbigtechinterviews.com%2Fsql-union-vs-union-all%2F&psig=AOvVaw3hYnLue203pBhcVAlnUNdZ&ust=1730381378288000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCLDy34ybtokDFQAAAAAdAAAAABAJ)
 
 ## 16.	В чем разница между UNION и UNION ALL ?
 ## 17.	Что такое SELECT ?
