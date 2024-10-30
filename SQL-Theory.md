@@ -278,8 +278,76 @@ MySQL, в свою очередь, – это система управлени�
         );
 
 ## 12.	Что такое соединения в SQL?
+Join — это операции, которые позволяют объединять строки из двух или более таблиц на основе логической связи между ними. Это позволяет извлекать связанные данные из разных таблиц в одном запросе.
+
+
 ## 13.	Какие ты  знаешь JOIN?
+![](https://lh7-us.googleusercontent.com/docsz/AD_4nXfD-jXPCv_eyET49SS_Ljc3IDy8DTTSCA7_4GbGtAfnzQRim2g-AbmsP9B_jroaCHWdXbg7ciw1ABmmtqlk34flraZ7-0APQ9surGKlHseVJG6jnJC0CzWGOp389zI7gOVTwnqKYYP05Bb_YG0ZDQZaxJwvso59roxEVYRhl18IsiY9jfIAEg?key=e0vsqrxBogS9Vk79SX7BEQ)
+
+### INNER JOIN:
+Возвращает строки, которые имеют совпадения в обеих таблицах.
+#### 📌Пример:
+
+    SELECT students.name, courses.course_name
+    FROM students
+    INNER JOIN enrollments ON students.student_id = enrollments.student_id
+    INNER JOIN courses ON enrollments.course_id = courses.course_id;
+### LEFT JOIN (или LEFT OUTER JOIN):
+Возвращает все строки из левой таблицы и совпадающие строки из правой таблицы. Если совпадения нет, возвращаются NULL значения для правой таблицы.
+#### 📌Пример:
+
+    SELECT students.name, courses.course_name
+    FROM students
+    LEFT JOIN enrollments ON students.student_id = enrollments.student_id
+    LEFT JOIN courses ON enrollments.course_id = courses.course_id;
+### RIGHT JOIN (или RIGHT OUTER JOIN):
+Возвращает все строки из правой таблицы и совпадающие строки из левой таблицы. Если совпадения нет, возвращаются NULL значения для левой таблицы.
+#### 📌Пример:
+
+    SELECT students.name, courses.course_name
+    FROM students
+    RIGHT JOIN enrollments ON students.student_id = enrollments.student_id
+    RIGHT JOIN courses ON enrollments.course_id = courses.course_id;
+### FULL JOIN (или FULL OUTER JOIN):
+Возвращает строки, которые имеют совпадения в одной из таблиц или обеих. Несовпадающие строки заполняются NULL значениями.
+#### 📌Пример:
+
+    SELECT students.name, courses.course_name
+    FROM students
+    FULL JOIN enrollments ON students.student_id = enrollments.student_id
+    FULL JOIN courses ON enrollments.course_id = courses.course_id;
+### CROSS JOIN:
+Возвращает декартово произведение строк из обеих таблиц, то есть каждая строка одной таблицы объединяется с каждой строкой другой таблицы.
+#### 📌Пример:
+
+    SELECT students.name, courses.course_name
+    FROM students
+    CROSS JOIN courses;
+    SELF JOIN:
+
+### Соединение таблицы с самой собой для извлечения связанных данных из одной таблицы.
+#### 📌Пример:
+
+    SELECT a.name AS name1, b.name AS name2
+    FROM employees a, employees b
+    WHERE a.manager_id = b.employee_id;
+
+
+
+
+
+
 ## 14.	Расскажи подробно про FULL JOIN
+
+
+
+
+
+
+
+
+
+
 ## 15.	Что такое Union?
 ## 16.	В чем разница между UNION и UNION ALL ?
 ## 17.	Что такое SELECT ?
